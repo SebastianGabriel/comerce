@@ -2,13 +2,14 @@ package com.egg.comerce.service;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import com.egg.comerce.repository.*;
 import com.egg.comerce.exception.UnfilledFormException;
 import com.egg.comerce.model.Item;
 import com.egg.comerce.model.Manufacturer;
-
 import jakarta.transaction.Transactional;
 
+@Service
 public class ItemService {
     @Autowired
     private ItemRepository itemRepository;

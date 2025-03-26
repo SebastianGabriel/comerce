@@ -7,7 +7,7 @@ import com.egg.comerce.model.Item;
 
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Long> {
-    @Query("SELECT MAX(i.code) FROM Item i")
+    @Query("SELECT MAX(i.itemCode) FROM Item i")
     Integer findMaxCode();
 }
 

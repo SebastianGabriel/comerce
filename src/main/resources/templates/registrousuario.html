@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>La Casa de Electricidad</h1>
+        </nav>
+    </header>
+
+    <main>
+        <form class="formulario" th:action="@{/alta}" method="POST">
+            <div class="form-group my-3">
+                <h3 class="card-title">Registrate!</h3>
+            </div>
+            <div class="form-group my-3">
+                <input type="text" class="form-control" name="name" placeholder="NOMBRE" th:value="${name}">
+            </div>
+            <div class="form-group my-3">
+                <input type="text" class="form-control" name="surname" placeholder="APELLIDO" th:value="${surname}">
+            </div>
+            <div class="form-group my-3">
+                <input type="email" class="form-control" name="email" placeholder="EMAIL" th:value="${email}">
+            </div>
+            <div class="form-group my-3">
+                <input type="password" class="form-control" name="password" placeholder="CONTRASEÑA" th:value="${password}">
+            </div>
+            <div class="form-group my-3">
+                <input type="password" class="form-control" name="password2" placeholder="REPETIR CONTRASEÑA" th:value="${password2}">
+            </div>
+            <button type="submit" class="btn btn-primary mt-3 botones">Registrarme</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 La Casa de Electricidad. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
